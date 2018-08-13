@@ -7,7 +7,7 @@ var express = require('express'),
 
 //conexión
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/Playground')
+mongoose.connect('mongodb://admin:admin123@ds121382.mlab.com:21382/mongo_poc')
 
 //bodyParser es un middleware que parsea los incoming request a JSon antes de enviarlo a los handlers
 app.use(bodyParser.urlencoded({ extended: true }));
