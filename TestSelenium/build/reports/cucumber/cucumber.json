@@ -1,0 +1,92 @@
+[
+  {
+    "line": 3,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 4414098906,
+              "status": "passed"
+            },
+            "match": {
+              "location": "WebDriverProducer.openBrowser()"
+            }
+          }
+        ],
+        "line": 8,
+        "name": "Login",
+        "description": "",
+        "id": "testing-login;login",
+        "after": [
+          {
+            "result": {
+              "duration": 1154203696,
+              "status": "passed"
+            },
+            "match": {
+              "location": "WebDriverProducer.teardown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 195641160,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I am on the login page with credentials",
+            "match": {
+              "location": "Login.iAmOnTheLoginPageWithCredentials()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2038558315,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I click on SIGN IN",
+            "match": {
+              "location": "Login.iClickOnSIGNIN()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 546242889,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "It should redirect",
+            "match": {
+              "location": "Login.itShouldRedirect()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 7,
+            "name": "@tag1"
+          }
+        ]
+      }
+    ],
+    "name": "Testing Login",
+    "description": "\nI want to use this template for my feature file",
+    "id": "testing-login",
+    "keyword": "Feature",
+    "uri": "Login.feature",
+    "tags": [
+      {
+        "line": 2,
+        "name": "@tag"
+      }
+    ]
+  }
+]
