@@ -1,3 +1,4 @@
 
 node_express_mongodb/package-lock\.json
 myPwaApp/dist
+myPwaApp/node_modules
