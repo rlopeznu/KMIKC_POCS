@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+import { Http, RequestOptions, RequestMethod, Headers } from '@angular/http';
 import { Report } from '../models/report';
 
 @Injectable({
@@ -7,16 +7,17 @@ import { Report } from '../models/report';
 })
 export class ReportService {
   private url = 'https://kmikc-nodejs-poc.herokuapp.com/report';
-
+  
   constructor(private http: Http) { }
   
   getReport(){
     return this.http.get(this.url);
   }
 
+  
+
   insertProduct(report: Report){
-    console.log(JSON.stringify(report));
-    this.http.post(this.url,JSON.stringify(report))
+    this.http.post(this.url, JSON.stringify(report),new RequestOptions({method: RequestMethod.Post ,headers: new Headers({'Content-Type': 'application/json'})}))
       .subscribe(response =>{
         console.log(response);
       });
