@@ -1,7 +1,10 @@
 # KMIKC_POCS
 Repositorio dedicado a Pruebas de Concepto Equipo KMIKC
 
-
+# Cliente Java e Integración con BigQuery 
+ - Crea un objeto de servicio de Bigquery autorizado utilizando una Application Default. Luego ejecuta una consulta contra el conjunto de datos público de Shakespeare  e imprime los resultados.
+Lenguajes: Java
+Gestor de Dependencias: Maven
 
 # Node.js, Express, Mongodb
 CRUD usando node js y mongodb

@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
+import { NgForm } from '@angular/forms';
+
+import { ReportService } from '../../services/report.service';
 
 @Component({
   selector: 'app-home',
@@ -7,8 +10,9 @@ import { Router, NavigationEnd } from '@angular/router';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  reports: any[];
 
-  constructor(private router: Router) {
+  constructor(private reportService: ReportService,private router: Router) {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
         (<any>window).ga('set', 'page', event.urlAfterRedirects);
@@ -17,7 +21,15 @@ export class HomeComponent implements OnInit {
     });
    }
 
+   onSubmit(productForm: NgForm){
+     this.reportService.insertProduct(productForm.value);
+   }
+
   ngOnInit() {
+    this.reportService.getReport()
+      .subscribe(response=>{
+        this.reports = response.json();
+      })
   }
 
 }
