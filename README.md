@@ -1,7 +1,8 @@
 # KMIKC_POCS
 Repositorio dedicado a Pruebas de Concepto Equipo KMIKC
 
-
+# Cliente Java e Integración con BigQuery (Tabla Pública)
+Utilizando Java , Maven
 
 # Node.js, Express, Mongodb
 CRUD usando node js y mongodb
