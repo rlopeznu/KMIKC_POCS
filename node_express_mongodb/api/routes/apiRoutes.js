@@ -1,6 +1,7 @@
 'use strict'
 module.exports = function(app) {
     var fligthInfoController = require('../controllers/fligthInfoController');
+    var bigQueryController = require('../controllers/bigQuery');
 
     app.all('/*', function(req, res, next) {
       res.header("Access-Control-Allow-Origin", "*");
@@ -16,4 +17,7 @@ module.exports = function(app) {
         .get(fligthInfoController.getReportByTitle)
         .put(fligthInfoController.updateReportByTitle)
         .delete(fligthInfoController.deleteReportByTitle);
+
+    app.route('/bigquerytest')
+        .get(bigQueryController.queryBigQuery);
 }
