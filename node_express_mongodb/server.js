@@ -5,7 +5,6 @@ var express = require('express'),
   flightInfo = require('./api/models/fligthInfo') //modelo
   bodyParser = require('body-parser');
   var cors = require('cors');
-
   
 //conexión
 mongoose.Promise = global.Promise;
@@ -20,6 +19,7 @@ var corsOptions = {
   optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 }
 
+app.options('*', cors())
 app.use(cors(corsOptions))
 
 //importar Rutas
@@ -31,9 +31,6 @@ app.use(function(req, res) {
   res.status(404).send({url: req.originalUrl + ' not found'})
 });
 
-app.listen(port); 
+app.listen(port);
 
 console.log('todo list RESTful API server started on: ' + port);
-
-
-
